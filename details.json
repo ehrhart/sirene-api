@@ -1,13 +1,41 @@
 {
   "proto": {
     "id": "?id",
-    "registration": "$rov:registration$required$var:?__registration"
+    "registration": "$rov:registration$required$var:?__registration",
+    "issued": "$dc:issued",
+    "updated": "$dc:updated",
+    "activitePrincipaleEtablissement": "$sirene:activitePrincipaleEtablissement",
+    "caractereEmployeurEtablissement": "$sirene:caractereEmployeurEtablissement",
+    "codeCommuneEtablissement": "$sirene:codeCommuneEtablissement",
+    "etablissementSiege": "$sirene:etablissementSiege",
+    "etatAdministratifEtablissement": "$sirene:etatAdministratifEtablissement",
+    "nic": "$sirene:nic",
+    "nombrePeriodesEtablissement": "$sirene:nombrePeriodesEtablissement",
+    "nomenclatureActivitePrincipaleEtablissement": "$sirene:nomenclatureActivitePrincipaleEtablissement",
+    "statutDiffusionEtablissement": "$sirene:statutDiffusionEtablissement",
+    "foundingDate": "$schema:foundingDate",
+    "siteAddress": {
+      "id": "?siteAddress",
+      "streetAddress": "$schema:streetAddress",
+      "postalCode": "$schema:postalCode",
+      "addressLocality": "$schema:addressLocality",
+      "addressCountry": "$schema:addressCountry"
+    },
+    "numberOfEmployees": "$schema:numberOfEmployees",
+    "anneeEffectifsEtablissement": "$sirene:anneeEffectifsEtablissement",
+    "sameAs": "$owl:sameAs"
   },
   "$lang": "en",
   "$where": [
+    "OPTIONAL { ?id org:siteAddress ?siteAddress }"
   ],
   "$prefixes": {
-    "rov": "http://www.w3.org/ns/regorg#"
+    "schema": "http://www.schema.org/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "org": "http://www.w3.org/ns/org#",
+    "rov": "http://www.w3.org/ns/regorg#",
+    "sirene": "http://sirene.eurecom.fr/ontology#"
   },
   "grlc": {
     "summary": "Obtain details for an organization",
