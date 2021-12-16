@@ -1,0 +1,16 @@
+{
+  "proto": {
+    "id": "?id",
+    "registration": "$rov:registration$required"
+  },
+  "$lang": "en",
+  "$where": [
+  ],
+  "$prefixes": {
+    "rov": "http://www.w3.org/ns/regorg#"
+  },
+  "grlc": {
+    "summary": "Obtain details for an organization",
+    "tags": ["list"]
+  }
+}
