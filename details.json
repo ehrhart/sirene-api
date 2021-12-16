@@ -1,7 +1,7 @@
 {
   "proto": {
     "id": "?id",
-    "registration": "$rov:registration$required"
+    "registration": "$rov:registration$required$var:?__registration"
   },
   "$lang": "en",
   "$where": [
